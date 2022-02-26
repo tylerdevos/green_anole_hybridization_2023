@@ -161,7 +161,7 @@ Convert imputed VCF to .bed format
 module load PLINK/1.9b_6.21-x86_64
 plink --vcf imputed.vcf --make-bed --out imputed --allow-extra-chr
 ```
-Prune loci using the R program bigsnpr
+Prune loci using the R package bigsnpr
 ###### This step requires the scripts [`bigsnpr.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/bigsnpr.sh) and [`bigsnpr.R`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/bigsnpr.R). Smoothing of p-values was suppressed (`roll.size=0`) to avoid errors caused by short scaffolds.
 ```
 sbatch ./bigsnpr.sh
