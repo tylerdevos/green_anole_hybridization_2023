@@ -1,9 +1,9 @@
 ## Initial Quality Check Procedure
 ### Part 1: Read Counting
 Count reads for all files
-###### This step uses the script [`Count_Reads.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/Count_Reads.sh). When complete, read counts for each sample are listed in a file named `read_counts.txt`.
+###### This step uses the script [`count_reads.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/count_reads.sh). When complete, read counts for each sample are listed in a file named `read_counts.txt`.
 ```
-sbatch ./Count_Reads.sh
+sbatch ./count_reads.sh
 ```
 Search for reads counts below or above a given value (here, 1,500,000 & 3,500,000)
 ```
