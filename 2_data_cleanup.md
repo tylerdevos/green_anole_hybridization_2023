@@ -44,7 +44,7 @@ sbatch ./ddocent.sh
 ```
 Determine the proportion of bases in the reference genome covered by the mapped reads
 ###### Divide the number of mapped bases (`awk '{SUM+=$3-$2+1}END{print SUM}' mapped.bed`) by the total number of bases in the reference genome (`grep -v ">" reference.fasta | wc | awk '{print $3-$1}'`).
-  
+   
 ### Part 4: SNP Filtering
 Copy all raw SNPs into a filtering directory
 ###### I copied the files into multiple subdirectories so that they could be filtered in multiple ways simultaneously.
@@ -115,11 +115,6 @@ vcfremovesamples all.biallelic.snps.MQ20.dp4.95d.maf3.header.vcf H_AC35 H_JJK195
 ```
 
 ### Part 6: IBS Analysis
-Send partially filtered 70% and 95% call rate files to home desktop (`all.biallelic.snps.MQ20.dp4.[70/95]d.maf3.AB.vcf`)
-```
-scp -r tylerdevos@ssh3.hac.uri.edu:/../../data/kolbelab/Tyler_folder/ddocent_input/Filtering_input/Filter_NS70/all.biallelic.snps.MQ20.dp4.70d.maf3.AB.vcf ~/Desktop/
-scp -r tylerdevos@ssh3.hac.uri.edu:/../../data/kolbelab/Tyler_folder/ddocent_input/Filtering_input/Filter_NS95/all.biallelic.snps.MQ20.dp4.95d.maf3.AB.vcf ~/Desktop/
-```
 Run an identity by state analysis to compare technical replicates across libraries
 ###### This step requires the scripts [`IBS.R`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/IBS.R) and [`trim_IBS.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/trim_IBS.sh). The first script should be run manually in the R Studio interface, while the second can be run using R through the command line. Partially filtered VCF files (e.g., `all.biallelic.snps.MQ20.dp4.70d.maf3.AB.vcf`) should be used as input for this analysis.
 
