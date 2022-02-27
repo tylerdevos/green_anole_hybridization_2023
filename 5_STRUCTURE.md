@@ -25,7 +25,7 @@ sbatch ./STRUCTURE_K7.sh
 sbatch ./STRUCTURE_K8.sh
 ```
 Create directories and files for final steps
-###### A file of individual sample names ordered as desired for plotting (`samples_ordered.txt`) must be placed in the directory before running this step. The contents of `population_ID` must be reordered to correspond to `samples_ordered.txt` if they do not already match.
+###### A file of individual sample names ordered as desired for plotting ([`samples_ordered.txt`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/samples_ordered.txt)) must be placed in the directory before running this step. The contents of `population_ID` must be reordered to correspond to `samples_ordered.txt` if they do not already match.
 ```
 mkdir all_results_files
 cp k1/Anolis* all_results_files/
