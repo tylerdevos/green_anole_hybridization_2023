@@ -1,6 +1,6 @@
 ## STRUCTURE
 Convert VCF file to STRUCTURE format
-###### This step requires the script [`VCF_to_STRUCTURE.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/VCF_to_STRUCTURE.sh) and the `population_ID` file created for the DAPC analysis (previous page)
+###### This step requires the script [`VCF_to_STRUCTURE.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/VCF_to_STRUCTURE.sh) and the [`population_ID`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/population_ID) file created for the DAPC analysis (previous page)
 ```
 ./VCF_to_STRUCTURE.sh
 ```
@@ -63,6 +63,6 @@ rm Anolis_k7
 rm Anolis_k8
 ```
 Plot STRUCTURE results
-###### This step requires the script [plot_STRUCTURE_results.R](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/plot_STRUCTURE_results.R), and should be run manually in the R Studio interface.
+###### This step requires the script [`plot_STRUCTURE_results.R`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/plot_STRUCTURE_results.R), and should be run manually in the R Studio interface.
   
 ### [<<< Back to Page 4: DAPC](https://github.com/tylerdevos/green_anole_hybridization/blob/main/4_DAPC.md)                    [To Page 6: introgress >>>](https://github.com/tylerdevos/green_anole_hybridization/blob/main/6_introgress.md)
