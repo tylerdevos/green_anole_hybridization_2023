@@ -1,4 +1,4 @@
-## introgress
+## Analyses with introgress
 Identify and create a subset of ancestry-informative markers (AIMs)
 ###### This step requires the script [`ID_AIMs_fixed.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/ID_AIMs_fixed.sh), along with text files listing which individuals belong to each parental population ([`carolinensis.txt`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/carolinensis.txt) and [`porcatus.txt`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/porcatus.txt)). AIMs retained are those which display fixed differences (FST=1) between parental populations.
 ```
