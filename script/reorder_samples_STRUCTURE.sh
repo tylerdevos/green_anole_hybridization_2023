@@ -1,6 +1,8 @@
 #!/bin/bash
-###re-order samples in the STRUCTURE K=3 and K=4 results files
-#prerequisites: a STRUCTURE results file for K=3 (named Anolis_k3) and for K=4 (named Anolis_k4)
+###re-order samples in the STRUCTURE results files
+#prerequisites: STRUCTURE results files
+
+#script provided by Dan Bock
 
 #set the sample size variable; edit this as needed, depending on dataset
 sample_size='101'
