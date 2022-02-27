@@ -5,7 +5,7 @@ library(ggplot2)
 
 ##read in data files for all samples
 #the input file was obtained using the "adegenet_PCA.R" script
-pca_all<-read.csv(file="~/Desktop/10Ksubset_no_smaragdinus.snp.results.csv",header = TRUE, sep = "")
+pca_all<-read.csv(file="~/Desktop/10Ksubset.snp.results.csv",header = TRUE, sep = "")
 
 #annotate sample groups
 car1 <- rep("carolinensis",14)
