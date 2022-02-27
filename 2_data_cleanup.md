@@ -175,4 +175,4 @@ cat header.txt loci.txt > LD_filtered_loci.vcf
 
   
   
-### [<<< Back to Page 1: Quality Check](https://github.com/tylerdevos/green_anole_hybridization/blob/main/1_initial_quality_check.md)                    [To Page 2: ??? >>>](https://github.com/tylerdevos/green_anole_hybridization/blob/main/3_???.md)
+### [<<< Back to Page 1: Quality Check](https://github.com/tylerdevos/green_anole_hybridization/blob/main/1_initial_quality_check.md)                    [To Page 3: PCA >>>](https://github.com/tylerdevos/green_anole_hybridization/blob/main/3_PCA.md)
