@@ -36,4 +36,4 @@ Plot PCA results
 ###### This step requires the script [`plot_PCA.R`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/plot_PCA.R), and should be run manually in the RStudio interface.
 
 
- ### [<<< Back to Page 2: Data Cleanup](https://github.com/tylerdevos/green_anole_hybridization/blob/main/2_data_cleanup.md)                    [To Page 4: DAPC >>>](https://github.com/tylerdevos/green_anole_hybridization/blob/main/4_DAPC.md)
+ ### [<<< Back to Page 2: Data Cleanup](https://github.com/tylerdevos/green_anole_hybridization/blob/main/2_data_cleanup.md)                    [To Page 4: DAPC >>>](https://github.com/tylerdevos/green_anole_hybridization/blob/main/4_DAPC.md)
