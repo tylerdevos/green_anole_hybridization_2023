@@ -1,4 +1,4 @@
-## DAPC
+## Discriminant Analysis of Principal Components
 Create a metadata file with sample names and population designations
 ###### A file of ordered integers corresponding to population designations, named [`population_ID`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/population_ID), must be placed in the directory in which the script is run.
 ```
