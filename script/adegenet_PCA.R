@@ -14,7 +14,7 @@ fileName<-args[1]
 
 #read in a SNP data file (i.e. with a '.snp' extension)
 #the read.snp function converts the input into a genlight object
-data<-read.snp("10Ksubset_no_smaragdinus.snp")
+data<-read.snp("10Ksubset.snp")
 
 #implement PCA for the genlight object, retaining the first 6 principal components
 #results will be stored as a glPCA list
