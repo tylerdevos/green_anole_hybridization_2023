@@ -44,7 +44,7 @@ The ipyrad VCF output file contains a column that includes:
 GT (Genotype):DP (total reads):CATG (# reads per allele) delimited by a colon.
 
 Dependencies:
-	PyVCF (I used version 0.6.8)
+	PyVCF (original author used version 0.6.8)
 """
 
 # Load necessary modules.
