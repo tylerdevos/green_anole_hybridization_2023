@@ -3,20 +3,20 @@ Select a random subset of ~10,000 SNPs from the fully filtered, 95% call rate fi
 ###### Note: the `-r` flag denotes the selection probability for individual SNPs. This parameter is determined by dividing the desired number of output SNPs by the total number of SNPs in the input file.
 ```
 module load ddocent
-vcfrandomsample -r 0.06776 all.biallelic.snps.MQ20.dp4.95d.maf3.70perc_data_samples.header.AB.noreps.vcf > subset.biallelic.snps.MQ20.dp4.95d.maf3.70perc_data_samples.header.AB.noreps.vcf
+vcfrandomsample -r 0.06776 LD_filtered_loci.vcf > subset.LD_filtered_loci.vcf
 ```
 Count the number of randomly selected SNPs in the subset file
 ```
-grep -v '#' subset.biallelic.snps.MQ20.dp4.95d.maf3.70perc_data_samples.header.AB.noreps.vcf | wc -l
+grep -v '#' subset.LD_filtered_loci.vcf | wc -l
 ```
 Count the number of header lines in the subset file
 ```
-grep '#' subset.biallelic.snps.MQ20.dp4.95d.maf3.70perc_data_samples.header.AB.noreps.vcf | wc -l
+grep '#' subset.LD_filtered_loci.vcf | wc -l
 ```
 Copy the header lines and first 10,000 SNPs in the subset file into a new file
 ###### The `-n` flag should be set to 10,000 + the number of header lines in the subset file
 ```
-head -n 16523 subset.biallelic.snps.MQ20.dp4.95d.maf3.70perc_data_samples.header.AB.noreps.vcf > 10Ksubset.vcf
+head -n 16523 subset.LD_filtered_loci.vcf > 10Ksubset.vcf
 ```
 Check that there are exactly 10,000 SNPs in the final subset VCF
 ```
