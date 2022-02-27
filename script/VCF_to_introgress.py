@@ -1,15 +1,5 @@
 #!/usr/bin/env python
-"""
-Converts `.vcf` file to INTROGRESS input files (4 files). Splits data into
-three categories: parental1, parental2 and admixed based on cluster assignment
-(provided in separate file; e.g. STRUCTURE output) and given threshold, and
-outputs data for loc that exceed a certain frequency difference between the
-two 'parental' categories.
 
-Note: not yet properly tested. also see similar `vcf_ancestry_matrix.py`
-script. I use the formatted CLUMPP output (`clumpp_K2.out.csv`) from the
-`structure_mp` wrapper as assignment file (max. of 2 clusters).
-"""
 import sys
 import argparse
 import vcf
