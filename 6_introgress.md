@@ -1,11 +1,11 @@
-## Data visualization with introgress
+## introgress
 Identify and create a subset of ancestry-informative markers (AIMs)
 ###### This step requires the script [`ID_AIMs_fixed.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/ID_AIMs_fixed.sh), along with text files listing which individuals belong to each parental population ([`carolinensis.txt`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/carolinensis.txt) and [`porcatus.txt`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/porcatus.txt)). AIMs retained are those which display fixed differences (FST=1) between parental populations.
 ```
 sbatch ./ID_AIMs_fixed.sh
 ```
 Convert VCF to introgress format
-###### This step requires the script [`VCF_to_introgress.py`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/VCF_to_introgress.py) and an additional input file ([`assignment_file.csv`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/assignment_file.csv)) containing sample names, population IDs, and population assignment probabilities from STRUCTURE (generated with script from previous page).
+###### This step requires the script [`VCF_to_introgress.py`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/VCF_to_introgress.py) and an additional input file ([`assignment_file.csv`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/assignment_file.csv)) containing sample names, population IDs, and population assignment probabilities from STRUCTURE analysis (previous page).
 ```
 module load PyVCF/0.6.8-GCC-8.3.0-Python-2.7.16
 ./VCF_to_introgress.py AIMs_fixed.vcf assignment_file.csv 0.999 0 introgress_input --include
