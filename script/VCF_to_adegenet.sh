@@ -6,7 +6,7 @@
 
 module load ddocent
 
-input='10Ksubset_no_smaragdinus'
+input='10Ksubset'
 #break up multiple nucleotide polymorphisms
 vcfallelicprimitives $input.vcf | vcfuniq > snp.$input.vcf
 sed -i 's/|/\//g' snp.$input.vcf
