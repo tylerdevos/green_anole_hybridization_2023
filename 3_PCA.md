@@ -1,4 +1,4 @@
-## Principle Component Analysis
+## Principal Component Analysis
 Select a random subset of ~10,000 SNPs from the fully filtered, 95% call rate file
 ###### Note: the `-r` flag denotes the selection probability for individual SNPs. This parameter is determined by dividing the desired number of output SNPs by the total number of SNPs in the input file.
 ```
