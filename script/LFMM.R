@@ -4,6 +4,7 @@
 library(LEA)
 library(lfmm)
 library(qvalue)
+library(car)
 
 #convert VCF to LFMM format
 setwd("~/Desktop/")
