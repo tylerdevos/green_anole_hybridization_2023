@@ -11,8 +11,8 @@ setwd("~/Desktop/")
 output = ped2lfmm("genotypes1.ped", force=TRUE)
 
 #import data
-genotypes<-read.delim(file="~/Desktop/R_input/genotypes.lfmm", header=FALSE, sep=" ")
-environment<-read.delim(file="~/Desktop/R_input/environment.csv", header=TRUE, sep=",")
+genotypes<-read.delim(file="~/Desktop/genotypes.lfmm", header=FALSE, sep=" ")
+environment<-read.delim(file="~/Desktop/environment.csv", header=TRUE, sep=",")
 canopy <- environment
 canopy$impervious <- NULL
 impervious <- environment
