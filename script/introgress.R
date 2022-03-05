@@ -59,7 +59,6 @@ ylab.image <- "Individuals"
 main.image <- "Marker Ancestry Plot"
 xlab.h <- "population 2 ancestry"
 col.image <- NULL
-#part 1
 hi.index<-hi.index[,2]	
 count.matrix<-introgress.data[[2]]
 lg<-sort(unique(as.numeric(loci.data[,3])))
