@@ -29,8 +29,8 @@ temp <- optim.a.score(dapc1)
 #Plot groups
 myCol <- c("#D5A034","#B4CCA4","#749D58","#437570")
 scatter(dapc1, clab=0, col=myCol, scree.da=TRUE)
-scatter(dapc1, 1,1, clab=0, col=myCol, scree.da=FALSE, leg=FALSE, txt.leg=c(italic("A. carolinensis"),"hybrid 1","hybrid 2",italic("A. porcatus")))
-scatter(dapc1, 2,2, clab=0, col=myCol, scree.da=FALSE, leg=FALSE, posi.leg=("topleft"),txt.leg=c("A. carolinensis","hybrid 1","hybrid 2","A. porcatus"))
+scatter(dapc1, 1,1, clab=0, col=myCol, scree.da=FALSE, leg=FALSE, txt.leg=c(expression(italic("A. carolinensis")),"hybrid group 1","hybrid group 2",expression(italic("A. porcatus"))))
+scatter(dapc1, 2,2, clab=0, col=myCol, scree.da=FALSE, leg=FALSE, posi.leg=("topleft"),txt.leg=c(expression(italic("A. carolinensis")),"hybrid group 1","hybrid group 2",expression(italic("A. porcatus"))))
 
 #Investigate admixed individuals
 compoplot(dapc1, posi="bottomright", txt.leg=c(expression(italic("A. carolinensis")),"hybrid group 1","hybrid group 2",expression(italic("A. porcatus"))),n.col=1,col=myCol)
