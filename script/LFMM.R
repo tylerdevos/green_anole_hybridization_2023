@@ -76,7 +76,7 @@ cand <- fdr1
 cand <- sub('.', '', cand)
 candidates <- as.numeric(cand)
 palette(rep(c("#ADADAD","#CCCCCC"),4))
-plot(-log10(adj.pv1), main="Group 1 Canopy Cover LFMM",xlab="SNP Position", ylab="-log(p)", pch = 19,cex = .2, col = chromosome) +
+plot(-log10(adj.pv1), main="Canopy Cover LFMM",xlab="SNP Position", ylab="-log(p)", pch = 19,cex = .2, col = chromosome) +
   points(candidates, -log10(adj.pv1)[candidates], col="red3")
 
 
@@ -121,7 +121,7 @@ cand2 <- fdr2
 cand2 <- sub('.', '', cand2)
 candidates2 <- as.numeric(cand2)
 palette(rep(c("#ADADAD","#CCCCCC"),4))
-plot(-log10(adj.pv2), main="Group 1 Impervious Surface Area LFMM",xlab="SNP Position", ylab="-log(p)", pch = 19,cex = .2, col = chromosome) +
+plot(-log10(adj.pv2), main="Impervious Surface Area LFMM",xlab="SNP Position", ylab="-log(p)", pch = 19,cex = .2, col = chromosome) +
   points(candidates2, -log10(adj.pv2)[candidates2], col="red3")
 
 
