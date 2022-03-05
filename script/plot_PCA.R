@@ -42,7 +42,7 @@ ggplot(pca_all, aes(PC3, PC4, colour=group))+
   #percent variance explained by each axis is calculated using the "adegenet_PCA.R" script
   xlab("\nPC3 (2.2%)")+
   ylab("PC4 (1.8%)\n")+
-  scale_colour_manual(values = c("#D5A034","#749D58","#437570"))
+  scale_colour_manual(name="Group", labels = c(expression(italic("A. carolinensis")),"hybrid",expression(italic("A. porcatus"))), values = c("#D5A034","#749D58","#437570"))
 
 #PLOT PC5 PC6 for all samples
 ggplot(pca_all, aes(PC5, PC6, colour=group))+
@@ -55,4 +55,4 @@ ggplot(pca_all, aes(PC5, PC6, colour=group))+
   #percent variance explained by each axis is calculated using the "adegenet_PCA.R" script
   xlab("\nPC5 (1.6%)")+
   ylab("PC6 (1.5%)\n")+
-  scale_colour_manual(values = c("#D5A034","#749D58","#437570"))
+  scale_colour_manual(name="Group", labels = c(expression(italic("A. carolinensis")),"hybrid",expression(italic("A. porcatus"))), values = c("#D5A034","#749D58","#437570"))
