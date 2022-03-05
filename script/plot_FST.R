@@ -57,15 +57,16 @@ carolinensis_porcatus <- subset(carolinensis_porcatus, grepl("^NC_", CHROM))
 ggplot(data = carolinensis_porcatus,aes(x = BPcum, y = WEIGHTED_FST, color=CHROM))+
   scale_color_manual(values = rep(c("#ADADAD","#CCCCCC"), 1000)) +
   geom_point(shape=1, size=0.2)+
-  geom_point(data=carolinensis_hybrid, shape=1, size=0.2)+
-  geom_point(data=porcatus_hybrid, shape=1, size=0.2)+
+  geom_point(data=carolinensis_hybrid1, shape=1, size=0.2)+
+  geom_point(data=porcatus_hybrid1, shape=1, size=0.2)+
   geom_smooth(span=0.2,se = FALSE, color="black", size=0.5, method = "loess", linetype=2)+
-  geom_smooth(data=carolinensis_hybrid, span=0.2,se = FALSE, color="#D49C2D", size=1, method = "loess")+
-  geom_smooth(data=porcatus_hybrid, span=0.2,se = FALSE, color="#457772", size=1, method = "loess")+
+  geom_smooth(data=carolinensis_hybrid1, span=0.2,se = FALSE, color="#D49C2D", size=1, method = "loess")+
+  geom_smooth(data=porcatus_hybrid1, span=0.2,se = FALSE, color="#457772", size=1, method = "loess")+
   labs(x = NULL, y = "Weighted FST") +
   scale_x_continuous(breaks=c(128000000,360000000,565000000,745000000,900000000,1015000000,1069000000), labels=c("chr1","chr2","chr3","chr4","chr5","chr6","*")) +
+  ggtitle("Hybrid Group 1") +
   theme_bw()+
-  theme( 
+  theme(plot.title=element_text(face="bold", hjust=0.5),
     legend.position = "none",
     panel.grid.major = element_blank(),
     panel.grid.minor = element_blank())
