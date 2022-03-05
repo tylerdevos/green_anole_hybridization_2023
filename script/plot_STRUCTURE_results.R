@@ -62,7 +62,7 @@ labels$V2 <- as.character(labels$V2)
 onelabset <- labels[,2,drop=FALSE]
 
 #plot results with ordered samples for K=2
-plotQ(slist_K2[1],returnplot=F,exportplot=T,basesize=11,width=15,grplab=onelabset,grplabsize=1,imgtype="pdf",clustercol=c("seagreen3","gold"),exportpath="../")
+plotQ(slist_K2[1],barbordersize=0.1,barbordercolour="black",returnplot=F,exportplot=T,basesize=11,width=15,grplab=onelabset,imgtype="jpeg",clustercol=c("#D5A034","#749D58"),exportpath="~/Desktop")
 
 #plot results with ordered samples for K=3
-plotQ(slist_K3[1],returnplot=F,exportplot=T,basesize=11,width=15,grplab=onelabset,grplabsize=1,imgtype="pdf",clustercol=c("seagreen3","mediumpurple2","gold"),exportpath="../")
+plotQ(slist_K3[1],barbordersize=0.1,barbordercolour="black",returnplot=F,exportplot=T,basesize=11,width=15,grplab=onelabset,grplabsize=1,imgtype="jpeg",clustercol=c("#437570","#749D58","#D5A034"),exportpath="~/Desktop")
