@@ -7,7 +7,7 @@ Input file
 #define INFILE 	 10Ksubset_LD_hybrid_subset.str
 
 Data file format
-#define NUMINDS 	 101
+#define NUMINDS 	 47
 #define NUMLOCI 	 10000
 #define PLOIDY  	 2
 #define MISSING 	 -9
