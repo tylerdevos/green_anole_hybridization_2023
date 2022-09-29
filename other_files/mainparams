@@ -4,7 +4,7 @@ Basic program parameters
 #define NUMREPS 	 150000
 
 Input file
-#define INFILE 	 10Ksubset_LD_hybrid_subset.str
+#define INFILE 	 10Ksubset_hybrid_subset.str
 
 Data file format
 #define NUMINDS 	 47
