@@ -5,7 +5,7 @@
 #script provided by Dan Bock
 
 #set the sample size variable; edit this as needed, depending on dataset
-sample_size='101'
+sample_size='47'
 
 #loop over K values to be plotted, and re-order samples for each analysis
 for k_value in {"1","2","3","4","5","6","7","8"}
