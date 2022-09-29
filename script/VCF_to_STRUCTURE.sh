@@ -8,7 +8,7 @@ sort='vcfsort'
 #convert VCF files to STRUCTURE format
 #the input VCF consists of 10k random filtered SNPs (at 95% call rate)
 
-infile='10Ksubset'
+infile='10Ksubset_hybrid_subset'
 #get only genotpes from vcf
 $keepgeno $infile.vcf GT | grep -v "#" | cut -f 10- > $infile.geno
 #transpose genotype files
