@@ -1,6 +1,19 @@
 ## STRUCTURE
+Randomly select 16 hybrid samples to retain for STRUCTURE analysis
+###### We used only a subset of the available hybrid samples for this analysis to meet the reccomendation of even sampling across groups.
+```
+module load ddocent
+vcfsamplenames 10Ksubset_LD.vcf > names.txt
+grep H_* names.txt > hybrids.txt
+shuf -n 16 hybrids.txt > hybrid_subset.txt
+cat hybrid_subset.txt
+```
+Create a new VCF file containing only parental samples and the 16 randomly selected hybrid samples
+```
+vcfkeepsamples 10Ksubset_LD.vcf C_CRYO4393 C_CRYO4394 C_CRYO4395 C_CRYO4397 C_CRYO4398 C_CRYO4399 C_CRYO4400 C_CRYO4401 C_CRYO4402 C_CRYO4403 C_CRYO4404 C_CRYO4405 C_CRYO4406 C_CRYO4407 H_JJK1932 H_JJK1933 H_MIA677 H_JJK1948 H_MIA713 H_JJK1947 H_JJK1945 H_MIA744 H_AC29 H_MIA50 H_AC13 H_MIA806 H_AC40 H_MIA636 H_AC36 H_AC8 H_MIA678 H_AC7 P_JJK2793 P_JJK2794 P_JJK2795 P_JJK2796 P_JJK2797 P_JJK2799 P_JJK2800 P_JJK2825 P_JJK2827 P_JJK2830 P_JJK2832 P_JJK3066 P_JJK3068 P_JJK3070 P_JJK3071 > 10Ksubset_LD_hybrid_subset.vcf
+```
 Convert VCF file to STRUCTURE format
-###### This step requires the script [`VCF_to_STRUCTURE.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/VCF_to_STRUCTURE.sh) and the [`population_ID`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/population_ID) file created for the DAPC analysis (previous page)
+###### This step requires the script [`VCF_to_STRUCTURE.sh`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/VCF_to_STRUCTURE.sh) and a modified version of the [`population_ID`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/population_ID) file created for the DAPC analysis (previous page; this file must be trimmed and reordered to reflect samples excluded during the subsetting step)
 ```
 ./VCF_to_STRUCTURE.sh
 ```
