@@ -53,18 +53,31 @@ carolinensis_hybrid <- subset(carolinensis_hybrid, grepl("^NC_", CHROM))
 porcatus_hybrid <- subset(porcatus_hybrid, grepl("^NC_", CHROM))
 carolinensis_porcatus <- subset(carolinensis_porcatus, grepl("^NC_", CHROM))
 
-####plot FST for all three groups
+####plot pairwise FST for all three groups
+#carolinensis/porcatus/hybrid group 1
 ggplot(data = carolinensis_porcatus,aes(x = BPcum, y = WEIGHTED_FST, color=CHROM))+
-  scale_color_manual(values = rep(c("#ADADAD","#CCCCCC"), 1000)) +
-  geom_point(shape=1, size=0.2)+
-  geom_point(data=carolinensis_hybrid1, shape=1, size=0.2)+
-  geom_point(data=porcatus_hybrid1, shape=1, size=0.2)+
   geom_smooth(span=0.2,se = FALSE, color="black", size=0.5, method = "loess", linetype=2)+
   geom_smooth(data=carolinensis_hybrid1, span=0.2,se = FALSE, color="#D49C2D", size=1, method = "loess")+
   geom_smooth(data=porcatus_hybrid1, span=0.2,se = FALSE, color="#457772", size=1, method = "loess")+
   labs(x = NULL, y = "Weighted FST") +
   scale_x_continuous(breaks=c(128000000,360000000,565000000,745000000,900000000,1015000000,1069000000), labels=c("chr1","chr2","chr3","chr4","chr5","chr6","*")) +
+  scale_y_continuous(breaks=seq(0,1,0.1), limits=c(0,1)) +
   ggtitle("Hybrid Group 1") +
+  theme_bw()+
+  theme(plot.title=element_text(face="bold", hjust=0.5),
+    legend.position = "none",
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank())
+
+#carolinensis/porcatus/hybrid group 2
+ggplot(data = carolinensis_porcatus,aes(x = BPcum, y = WEIGHTED_FST, color=CHROM))+
+  geom_smooth(span=0.2,se = FALSE, color="black", size=0.5, method = "loess", linetype=2)+
+  geom_smooth(data=carolinensis_hybrid2, span=0.2,se = FALSE, color="#D49C2D", size=1, method = "loess")+
+  geom_smooth(data=porcatus_hybrid2, span=0.2,se = FALSE, color="#457772", size=1, method = "loess")+
+  labs(x = NULL, y = "Weighted FST") +
+  scale_x_continuous(breaks=c(128000000,360000000,565000000,745000000,900000000,1015000000,1069000000), labels=c("chr1","chr2","chr3","chr4","chr5","chr6","*")) +
+  scale_y_continuous(breaks=seq(0,1,0.1), limits=c(0,1)) +
+  ggtitle("Hybrid Group 2") +
   theme_bw()+
   theme(plot.title=element_text(face="bold", hjust=0.5),
     legend.position = "none",
