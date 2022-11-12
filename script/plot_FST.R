@@ -56,6 +56,13 @@ carolinensis_porcatus <- subset(carolinensis_porcatus, grepl("^NC_", CHROM))
 ####plot pairwise FST for all three groups
 #carolinensis/porcatus/hybrid group 1
 ggplot(data = carolinensis_porcatus,aes(x = BPcum, y = WEIGHTED_FST, color=CHROM))+
+  geom_rect(xmin=0, xmax=263920458, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
+  geom_rect(xmin=263920458, xmax=463540353, ymin=0, ymax=1, fill="#CCCCCC", color=NA)+
+  geom_rect(xmin=463540353, xmax=667956763, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
+  geom_rect(xmin=667956763, xmax=824459207, ymin=0, ymax=1, fill="#CCCCCC", color=NA)+
+  geom_rect(xmin=824459207, xmax=975100780, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
+  geom_rect(xmin=975100780, xmax=1055842735, ymin=0, ymax=1, fill="#CCCCCC", color=NA)+
+  geom_rect(xmin=1055842735, xmax=1081644591, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
   geom_smooth(span=0.2,se = FALSE, color="black", size=0.5, method = "loess", linetype=2)+
   geom_smooth(data=carolinensis_hybrid1, span=0.2,se = FALSE, color="#D49C2D", size=1, method = "loess")+
   geom_smooth(data=porcatus_hybrid1, span=0.2,se = FALSE, color="#457772", size=1, method = "loess")+
@@ -71,6 +78,13 @@ ggplot(data = carolinensis_porcatus,aes(x = BPcum, y = WEIGHTED_FST, color=CHROM
 
 #carolinensis/porcatus/hybrid group 2
 ggplot(data = carolinensis_porcatus,aes(x = BPcum, y = WEIGHTED_FST, color=CHROM))+
+  geom_rect(xmin=0, xmax=263920458, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
+  geom_rect(xmin=263920458, xmax=463540353, ymin=0, ymax=1, fill="#CCCCCC", color=NA)+
+  geom_rect(xmin=463540353, xmax=667956763, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
+  geom_rect(xmin=667956763, xmax=824459207, ymin=0, ymax=1, fill="#CCCCCC", color=NA)+
+  geom_rect(xmin=824459207, xmax=975100780, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
+  geom_rect(xmin=975100780, xmax=1055842735, ymin=0, ymax=1, fill="#CCCCCC", color=NA)+
+  geom_rect(xmin=1055842735, xmax=1081644591, ymin=0, ymax=1, fill="#ADADAD", color=NA)+
   geom_smooth(span=0.2,se = FALSE, color="black", size=0.5, method = "loess", linetype=2)+
   geom_smooth(data=carolinensis_hybrid2, span=0.2,se = FALSE, color="#D49C2D", size=1, method = "loess")+
   geom_smooth(data=porcatus_hybrid2, span=0.2,se = FALSE, color="#457772", size=1, method = "loess")+
