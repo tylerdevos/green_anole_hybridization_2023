@@ -1,5 +1,5 @@
 ###Plot FST
-#script provided by Dan Bock
+#script provided by Dan Bock and updated by Tyler DeVos
 
 #load the required library
 library(ggplot2)
