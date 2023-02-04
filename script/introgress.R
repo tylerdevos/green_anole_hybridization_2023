@@ -30,7 +30,7 @@ triangle.plot(hi.index=hi.index.sim, int.het=int.het.sim, pdf=FALSE)
 #nicer triangle plot with ggplot
 triangledata <- hi.index.sim
 triangledata$het <- int.het.sim
-triangledata$pop <- c("porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid2", "hybrid2", "hybrid1", "hybrid1", "hybrid2", "hybrid2", "hybrid2", "hybrid1", "hybrid2", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid2", "hybrid1", "hybrid2", "hybrid2", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid2", "hybrid1", "hybrid1", "hybrid1", "hybrid1", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid1", "hybrid1", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid1", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid2", "hybrid1", "hybrid1", "hybrid1", "hybrid2", "hybrid1", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis")
+triangledata$pop <- c("porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "porcatus", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis", "carolinensis")
 ggplot(triangledata, aes(h,het,color=pop,fill=pop))+
   geom_point(shape=21, alpha=1, size=3, color="black")+
   geom_segment(x=0,y=0,xend=0.5,yend=1,color="black",size=0.01)+
@@ -39,7 +39,7 @@ ggplot(triangledata, aes(h,het,color=pop,fill=pop))+
   labs(fill="Group")+
   scale_x_continuous(name="Hybrid Index", limits=c(0,1), breaks=seq(0,1, by=0.1))+
   scale_y_continuous(name="Interspecific Heterozygosity", limits=c(0,1), breaks=seq(0,1, by=0.1))+
-  scale_fill_manual(labels = c(expression(italic("A. carolinensis")),"hybrid group 1","hybrid group 2",expression(italic("A. porcatus"))), values=c("#D5A034","#B4CCA4","#749D58","#437570"))+
+  scale_fill_manual(labels = c(expression(italic("A. carolinensis")), "hybrids", expression(italic("A. porcatus"))), values=c("#D5A034","#749D58","#437570"))+
   theme_bw()+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),legend.title.align = 0.45, legend.text.align=0)
 
