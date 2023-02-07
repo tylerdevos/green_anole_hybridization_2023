@@ -42,6 +42,6 @@ sed '50338q;d' noheader.txt
    
 ### Part 2: Additional Tests
 Test for correlation between environmental predictors and non-native ancestry (simple linear regression -> Moran's I test -> Lagrange multiplier diagnostic tests -> spatial lag model)
-###### This step requires the script [`environmental_correlation_tests.R`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/environmental_correlation_tests.R) and a [`environmental_and_ancestry_data.csv`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/environmental_and_ancestry_data.csv) file containing ancestry proportions, environmental data, and spatial information for each hybrid individual. This script should be run manually in the R Studio interface.
+###### This step requires the script [`environmental_correlation_tests.R`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/script/environmental_correlation_tests.R) and an [`environmental_and_ancestry_data.csv`](https://github.com/tylerdevos/green_anole_hybridization/blob/main/other_files/environmental_and_ancestry_data.csv) file containing ancestry proportions, environmental data, and spatial information for each hybrid individual. This script should be run manually in the R Studio interface.
 
 ### [<<< Back to Page 8: Genomic Clines](https://github.com/tylerdevos/green_anole_hybridization/blob/main/8_genomic_clines.md)
