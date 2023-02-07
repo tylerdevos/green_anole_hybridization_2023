@@ -1,4 +1,4 @@
-###Environmental correlation analyses
+###Environmental correlation tests
 
 library(ggtext)
 library(ggplot2)
